@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Raleigh Crash Map</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="css/typeahead.js-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/MarkerCluster.css">
+    <link rel="stylesheet" type="text/css" href="css/MarkerCluster.Default.css">
+    <link rel="stylesheet" type="text/css" href="css/leaflet.draw.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn"t work if you view the page via file:// -->
+    <!--[if lt IE 9]>-->
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <!--<![endif]-->
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Raleigh Crash Map</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a id="print" href="javascript:void(0)">Print</a></li>
+          <li>
+            <form id="exportform" action="php/export.php" method="post" target="_blank" style="display:none">
+              <input id="exportcolumns" name="columns" style="display:none"/>
+              <input id="exportdata" name="csv" style="display:none"/>
+            </form>
+            <a id="export" href="javascript:void(0)">Export</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div id="left-panel" class="col-sm-4">
+          <div class="panel-group" id="accordion">
+<!--             <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseStandard">
+                    Standard Query
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseStandard" class="panel-collapse collapse in">
+                <div class="panel-body">
+
+                </div>
+              </div>
+            </div> -->
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseQuery">
+                    Query
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseQuery" class="panel-collapse collapse in">
+                <div class="panel-body">
+                  <select id="queryType" class="form-control">
+                    <option>Standard</option>
+                    <option>Non-Standard</option>
+                  </select>
+                  <div id="standardDiv">
+                    <select id="querySelect" class="form-control">
+                      <option value="prompt">Select Standard Query</option>
+                      <option value="0">Distracted Driver</option>
+                      <option value="1">Impairment Related</option>
+                      <option value="2">No Seat Belt</option>
+                      <option value="3">Teenage Driver</option>
+                      <option value="4">Angle Collisions</option>
+                      <option value="5">Left Turn Collisions</option>
+                      <option value="6">Following Too Close</option>
+                      <option value="7">All Crashes</option>
+                    </select>
+                  </div>
+                  <div id="nonStandardDiv">
+                    <select id="categorySelect" class="form-control">
+                      <option value="prompt">Select Category</option>
+                    </select>
+                    <div id="categoryArea">
+                    </div>
+                    <ul id="queryString">
+                    </ul>
+                    <button id="clearButton" class="btn btn-default" style="margin-top: 10px; width: 100%">Clear Query</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                    Date and Time
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-sm-5">
+                        <div class="input-group date" id="fromDate">
+                          <input type="text" class="form-control input-sm" />
+                          <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                          </span>
+                        </div>
+                      </div>
+                      <center class="col-sm-2">to</center>
+                      <div class="col-sm-5">
+                        <div class="input-group date" id="toDate">
+                          <input type="text" class="form-control input-sm" />
+                          <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-sm-5">
+                        <div class="input-group date" id="fromTime">
+                          <input type="text" class="form-control input-sm" value="12:00 AM" />
+                          <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-time"></span>
+                          </span>
+                        </div>
+                      </div>
+                      <center class="col-sm-2">to</center>
+                      <div class="col-sm-5">
+                        <div class="input-group date" id="toTime">
+                          <input type="text" class="form-control input-sm" value="11:59 PM" />
+                          <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-time"></span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <center class="form-group">
+                    <h5>Days Of Week</h5>
+                    <div class="btn-group dow" data-toggle="buttons">
+                      <label class="btn btn-default active">
+                        <input data-dow="Sunday" type="checkbox">S
+                      </label>
+                      <label class="btn btn-default active">
+                        <input data-dow="Monday" type="checkbox">M
+                      </label>
+                      <label class="btn btn-default active">
+                        <input data-dow="Tuesday" type="checkbox">T
+                      </label>
+                      <label class="btn btn-default active">
+                        <input data-dow="Wednesday" type="checkbox">W
+                      </label>
+                      <label class="btn btn-default active">
+                        <input data-dow="Thursday" type="checkbox">T
+                      </label>
+                      <label  class="btn btn-default active">
+                        <input data-dow="Friday" type="checkbox">F
+                      </label>
+                      <label class="btn btn-default active">
+                        <input data-dow="Saturday" type="checkbox">S
+                      </label>
+                    </div>
+                  </center>
+                  <div class="form-group">
+                    <button class="refresh col-xs-12 btn btn-default">Refresh</button>
+                  </div>
+                </div>
+              </div>
+            </div>            
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                    Locate Address
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <form class="form-horizontal" role="form">
+                    <div class="form-group form-search-by">
+                      <label class="form-label col-sm-3">Search By</label>
+                      <div class="col-sm-9">
+                        <select class="form-control">
+                          <option value="form-address">Address</option>
+                          <option value="form-intersection">Intersection</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-location">
+                      <div class="form-group form-address">
+                        <div class="col-sm-12">
+                          <input id="addressInput" placeholder="Enter Address..." class="form-control"/>
+                        </div>
+                      </div>
+                      <div class="form-group form-intersection" hidden>
+                        <div class="col-sm-12">
+                          <input id="street1" placeholder="Enter Street Name..." class="form-control"/>
+                        </div>
+                      </div>
+                      <div class="form-group form-intersection" hidden>
+                        <div class="col-sm-12">
+                          <select id="street2" class="form-control"></select>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+            <button id="searchBtn" class="btn btn-success" style="width: 100%;margin-bottom: 10px;">Search</button>
+            <div class="progress progress-striped active">
+              <div class="progress-bar"  role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+            <div class="alert alert-warning">
+              <strong>Warning!</strong> Better check yourself, you're not looking too good.
+            </div>
+        </div>
+        <div id="map-panel" class="col-sm-8">
+          <div id="map"></div>
+        </div>
+      </div>
+      <div id="pageDiv" class="row">
+        <div class="col-sm-12">
+          <div id="paginator" class="pull-left">
+          </div>
+          <form class="form-horizontal pull-left">
+            <div class="form-group">
+              <label class="form-label pull-left small">Results Per Page</label>
+                <select id="results" class="form-control pull-left input-sm">
+                  <option value="10">10</option>
+                  <option value="20" selected>20</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <!--<option value="all">All</option>-->
+                </select>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <table id="list" class="table table-condensed table-striped">
+            <thead>
+              <th>Incident</th>
+              <th>Date</th>
+              <th>Officer</th>
+              <th>On</th>
+              <th>At</th>
+              <th>To</th>
+              <th></th>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="footer well col-xs-12">
+        <div class="row">
+          <div class="col-sm-3">
+            <center><img src="img/RIC.png"/></center>
+          </div>
+          <div class="col-sm-6">
+            <center>
+              <p>Application developed by the City of Raleigh <a href="http://www.raleighnc.gov/business/content/ITechAdmin/Articles/GeographicInformationServices.html" target="_blank">Geographic Information Services division.</a></p>
+              <p>Application developed for the City of <a href="http://www.raleighnc.gov/police" target="_blank">Raleigh Police Department</a> and Raleigh Intelligence Center</p>
+              <p>&copy; 2014</p>
+            </center>
+          </div>
+          <div class="col-sm-3">
+            <center><img src="img/city-seal.png"/></center>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--MODALS-->
+    <div id="notesModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog"aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Notes</h4>
+          </div>
+          <div class="modal-body">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap"s JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/typeahead.min.js"></script>
+    <script src="js/bootstrap-paginator.min.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+    <script src="js/leaflet.markercluster.js"></script>
+    <script src="js/leaflet-heat.js"></script>
+    <script src="js/leaflet.draw.js"></script>
+    <script src="js/json2.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

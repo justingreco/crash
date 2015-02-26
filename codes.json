@@ -1,0 +1,2927 @@
+[
+    {
+        "category": "Locality",
+        "id": "1",
+        "view": "vCrash",
+        "fields": "CrashCode01",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Rural (<30% developed)",
+                "id": "1"
+            },
+            {
+                "value": "Mixed (30% to 70% developed)",
+                "id": "2"
+            },
+            {
+                "value": "(>70% developed)",
+                "id": "3"
+            }
+        ]
+    },
+    {
+        "category": "Predominant Development Type",
+        "id": "2",
+        "view": "vCrash",
+        "fields": "CrashCode02",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Farms, woods, pastures",
+                "id": "1"
+            },
+            {
+                "value": "Residential",
+                "id": "2"
+            },
+            {
+                "value": "Commercial",
+                "id": "3"
+            },
+            {
+                "value": "Institutional",
+                "id": "4"
+            },
+            {
+                "value": "Industrial",
+                "id": "5"
+            }
+        ]
+    },
+    {
+        "category": "Road Service Condition",
+        "id": "3",
+        "view": "vCrash",
+        "fields": "CrashCode03",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Dry",
+                "id": "1"
+            },
+            {
+                "value": "Wet",
+                "id": "2"
+            },
+            {
+                "value": "Water (standing, moving)",
+                "id": "3"
+            },
+            {
+                "value": "Ice",
+                "id": "4"
+            },
+            {
+                "value": "Snow",
+                "id": "5"
+            },
+            {
+                "value": "Slush",
+                "id": "6"
+            },
+            {
+                "value": "Sand, mud, dirt, gravel",
+                "id": "7"
+            },
+            {
+                "value": "Fuel, oil",
+                "id": "8"
+            },
+            {
+                "value": "Other",
+                "id": "9"
+            },
+            {
+                "value": "Unknown",
+                "id": "10"
+            }
+        ]
+    },
+    {
+        "category": "Weather Condition",
+        "id": "4",
+        "view": "vCrash",
+        "fields": "CrashCode04,CrashCode05",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Clear",
+                "id": "1"
+            },
+            {
+                "value": "Cloudy",
+                "id": "2"
+            },
+            {
+                "value": "Raining",
+                "id": "3"
+            },
+            {
+                "value": "Snowing",
+                "id": "4"
+            },
+            {
+                "value": "Fog, smog, smoke",
+                "id": "5"
+            },
+            {
+                "value": "Sleet, hail, freezing rain/drizzle",
+                "id": "6"
+            },
+            {
+                "value": "Severe crosswinds",
+                "id": "7"
+            },
+            {
+                "value": "Blowing sand, dirt, snow",
+                "id": "8"
+            },
+            {
+                "value": "Other",
+                "id": "9"
+            }
+        ]
+    },
+    {
+        "category": "Weather Contributed to the Crash",
+        "id": "6",
+        "view": "vCrash",
+        "fields": "CrashCode06",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Yes",
+                "id": "1"
+            },
+            {
+                "value": "No",
+                "id": "2"
+            },
+            {
+                "value": "Unknown",
+                "id": "3"
+            }
+        ]
+    },
+    {
+        "category": "Ambient Light",
+        "id": "7",
+        "view": "vCrash",
+        "fields": "CrashCode07",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Daylight",
+                "id": "1"
+            },
+            {
+                "value": "Dusk",
+                "id": "2"
+            },
+            {
+                "value": "Dawn",
+                "id": "3"
+            },
+            {
+                "value": "Darkness (lighted roadway)",
+                "id": "4"
+            },
+            {
+                "value": "Darkness (roadway not lighted)",
+                "id": "5"
+            },
+            {
+                "value": "Darkness (unknown lighting)",
+                "id": "6"
+            },
+            {
+                "value": "Other",
+                "id": "7"
+            },
+            {
+                "value": "Unknown",
+                "id": "8"
+            }
+        ]
+    },
+    {
+        "category": "Contributing Circumstances, Non-Motorist",
+        "id": "8",
+        "view": "vCrash",
+        "fields": "CrashCode08,CrashCode09",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "None",
+                "id": "0"
+            },
+            {
+                "value": "Coming from behind parked vehicle",
+                "id": "1"
+            },
+            {
+                "value": "Darting",
+                "id": "2"
+            },
+            {
+                "value": "Lying and/or illegally in the roadway",
+                "id": "3"
+            },
+            {
+                "value": "Failure to yield right of way",
+                "id": "4"
+            },
+            {
+                "value": "Not visible (dark clothing, etc.)",
+                "id": "5"
+            },
+            {
+                "value": "Inattentive (talking, eating, etc.)",
+                "id": "6"
+            },
+            {
+                "value": "Failure to obey traffic signs, signals",
+                "id": "7"
+            },
+            {
+                "value": "Wrong side of road",
+                "id": "8"
+            },
+            {
+                "value": "Other",
+                "id": "9"
+            },
+            {
+                "value": "Unknown",
+                "id": "10"
+            }
+        ]
+    },
+    {
+        "category": "First Harmful Event (Crash Level)",
+        "id": "10",
+        "view": "vCrash",
+        "fields": "CrashCode10",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Ran off Road Right",
+                "id": "1"
+            },
+            {
+                "value": "Ran off Road Left",
+                "id": "2"
+            },
+            {
+                "value": "Ran off Road Straight Ahead",
+                "id": "3"
+            },
+            {
+                "value": "Jackknife",
+                "id": "4"
+            },
+            {
+                "value": "Overturn/Rollover",
+                "id": "5"
+            },
+            {
+                "value": "Other Non-Collision",
+                "id": "13"
+            },
+            {
+                "value": "Pedestrian",
+                "id": "14"
+            },
+            {
+                "value": "Pedalcyclist",
+                "id": "15"
+            },
+            {
+                "value": "Railway Train, Engine",
+                "id": "16"
+            },
+            {
+                "value": "Animal",
+                "id": "17"
+            },
+            {
+                "value": "Movable Object",
+                "id": "18"
+            },
+            {
+                "value": "Fixed Object",
+                "id": "19"
+            },
+            {
+                "value": "Parked Motor Vehicle",
+                "id": "20"
+            },
+            {
+                "value": "Rear End, Slow, or Stop",
+                "id": "21"
+            },
+            {
+                "value": "Rear End, Turn",
+                "id": "22"
+            },
+            {
+                "value": "Left Turn, Same Roadway",
+                "id": "23"
+            },
+            {
+                "value": "Left Turn, Different Roadways",
+                "id": "24"
+            },
+            {
+                "value": "Right Turn, Same Roadway",
+                "id": "25"
+            },
+            {
+                "value": "Right Turn, Different Roadways",
+                "id": "26"
+            },
+            {
+                "value": "Head On",
+                "id": "27"
+            },
+            {
+                "value": "Sideswipe, Same Direction",
+                "id": "28"
+            },
+            {
+                "value": "Sideswipe, Opposite Direction",
+                "id": "29"
+            },
+            {
+                "value": "Angle Collision",
+                "id": "30"
+            },
+            {
+                "value": "Backing Up",
+                "id": "31"
+            },
+            {
+                "value": "Other Collision With Vehicle",
+                "id": "32"
+            }
+        ]
+    },
+    {
+        "category": "Most Harmful Event (Crash Level)",
+        "id": "11",
+        "view": "vCrash",
+        "fields": "CrashCode11",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Ran off Road Right",
+                "id": "1"
+            },
+            {
+                "value": "Ran off Road Left",
+                "id": "2"
+            },
+            {
+                "value": "Ran off Road Straight Ahead",
+                "id": "3"
+            },
+            {
+                "value": "Jackknife",
+                "id": "4"
+            },
+            {
+                "value": "Overturn/Rollover",
+                "id": "5"
+            },
+            {
+                "value": "Other Non-Collision",
+                "id": "13"
+            },
+            {
+                "value": "Pedestrian",
+                "id": "14"
+            },
+            {
+                "value": "Pedalcyclist",
+                "id": "15"
+            },
+            {
+                "value": "Railway Train, Engine",
+                "id": "16"
+            },
+            {
+                "value": "Animal",
+                "id": "17"
+            },
+            {
+                "value": "Movable Object",
+                "id": "18"
+            },
+            {
+                "value": "Fixed Object",
+                "id": "19"
+            },
+            {
+                "value": "Parked Motor Vehicle",
+                "id": "20"
+            },
+            {
+                "value": "Rear End, Slow, or Stop",
+                "id": "21"
+            },
+            {
+                "value": "Rear End, Turn",
+                "id": "22"
+            },
+            {
+                "value": "Left Turn, Same Roadway",
+                "id": "23"
+            },
+            {
+                "value": "Left Turn, Different Roadways",
+                "id": "24"
+            },
+            {
+                "value": "Right Turn, Same Roadway",
+                "id": "25"
+            },
+            {
+                "value": "Right Turn, Different Roadways",
+                "id": "26"
+            },
+            {
+                "value": "Head On",
+                "id": "27"
+            },
+            {
+                "value": "Sideswipe, Same Direction",
+                "id": "28"
+            },
+            {
+                "value": "Sideswipe, Opposite Direction",
+                "id": "29"
+            },
+            {
+                "value": "Angle Collision",
+                "id": "30"
+            },
+            {
+                "value": "Backing Up",
+                "id": "31"
+            },
+            {
+                "value": "Other Collision With Vehicle",
+                "id": "32"
+            }
+        ]
+    },
+    {
+        "category": "Contributing Circumstances, Roadway",
+        "id": "12",
+        "view": "vCrash",
+        "fields": "CrashCode12,CrashCode13",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "None (no unusual conditions)",
+                "id": "0"
+            },
+            {
+                "value": "Road Surface Condition",
+                "id": "1"
+            },
+            {
+                "value": "Debris",
+                "id": "2"
+            },
+            {
+                "value": "Rut, Holes, Bumps",
+                "id": "3"
+            },
+            {
+                "value": "Work Zone (construction, maintenance, utility)",
+                "id": "4"
+            },
+            {
+                "value": "Worn Travel-Polished Surface",
+                "id": "5"
+            },
+            {
+                "value": "Obstruction in Roadway",
+                "id": "6"
+            },
+            {
+                "value": "Traffic Control Device Inoperative, Not Visible or Missing",
+                "id": "7"
+            },
+            {
+                "value": "Shoulders Low, Soft or High",
+                "id": "8"
+            },
+            {
+                "value": "No Shoulders",
+                "id": "9"
+            },
+            {
+                "value": "Non-Highway Work",
+                "id": "10"
+            },
+            {
+                "value": "Other",
+                "id": "11"
+            },
+            {
+                "value": "Unknown",
+                "id": "12"
+            }
+        ]
+    },
+    {
+        "category": "Contributing Circumstances, Driver",
+        "id": "14",
+        "view": "vCrashPerson",
+        "fields": "ContributingCircumstance1,ContributingCircumstance2,ContributingCircumstance3",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "No contributing circumstances indicated",
+                "id": "0"
+            },
+            {
+                "value": "Disregarded yield sign",
+                "id": "1"
+            },
+            {
+                "value": "Disregarded stop sign",
+                "id": "2"
+            },
+            {
+                "value": "Disregarded other traffic signs",
+                "id": "3"
+            },
+            {
+                "value": "Disregarded traffic signals",
+                "id": "4"
+            },
+            {
+                "value": "Disregarded road markings",
+                "id": "5"
+            },
+            {
+                "value": "Exceeded authorized speed limit",
+                "id": "6"
+            },
+            {
+                "value": "Exceeded safe speed for conditions",
+                "id": "7"
+            },
+            {
+                "value": "Failure to reduce speed",
+                "id": "8"
+            },
+            {
+                "value": "Improper turn",
+                "id": "9"
+            },
+            {
+                "value": "Right turn on red",
+                "id": "10"
+            },
+            {
+                "value": "Crossed centerline/going wrong way",
+                "id": "11"
+            },
+            {
+                "value": "Improper lane change",
+                "id": "12"
+            },
+            {
+                "value": "Use of improper lane",
+                "id": "13"
+            },
+            {
+                "value": "Overcorrected/oversteered",
+                "id": "14"
+            },
+            {
+                "value": "Passed stopped school bus",
+                "id": "15"
+            },
+            {
+                "value": "Passed on hill",
+                "id": "16"
+            },
+            {
+                "value": "Passed on curve",
+                "id": "17"
+            },
+            {
+                "value": "Other improper passing",
+                "id": "18"
+            },
+            {
+                "value": "Failed to yield right of way",
+                "id": "19"
+            },
+            {
+                "value": "Inattention",
+                "id": "20"
+            },
+            {
+                "value": "Improper backing",
+                "id": "21"
+            },
+            {
+                "value": "Improper parking",
+                "id": "22"
+            },
+            {
+                "value": "Driver distracted",
+                "id": "23"
+            },
+            {
+                "value": "Improper or no signal",
+                "id": "24"
+            },
+            {
+                "value": "Followed too closely",
+                "id": "25"
+            },
+            {
+                "value": "Operated vehicle in erratic, reckless, careless, negligent or aggressive manner",
+                "id": "26"
+            },
+            {
+                "value": "Swerved or avoided due to wind, slippery surface, vehicle, object, non-motorist",
+                "id": "27"
+            },
+            {
+                "value": "Visibility obstructed",
+                "id": "28"
+            },
+            {
+                "value": "Operated defective equipment",
+                "id": "29"
+            },
+            {
+                "value": "Alcohol use",
+                "id": "30"
+            },
+            {
+                "value": "Drug use",
+                "id": "31"
+            },
+            {
+                "value": "Other",
+                "id": "32"
+            },
+            {
+                "value": "Unable to determine",
+                "id": "33"
+            },
+            {
+                "value": "Unknown",
+                "id": "34"
+            },
+            {
+                "value": "Driver distracted by electronic communication device (cell phone, texting, etc.)",
+                "id": "35"
+            },
+            {
+                "value": "Driver distracted by other electronic device (navigation device, DVD player, etc.)",
+                "id": "36"
+            },
+            {
+                "value": "Driver distracted by other inside the vehicle",
+                "id": "37"
+            },
+            {
+                "value": "Driver distracted by external distraction (outside the vehicle)",
+                "id": "38"
+            }
+        ]
+    },
+    {
+        "category": "Commercial Motor Vehicle",
+        "id": "20",
+        "view": "vCrashPerson",
+        "fields": "CDL",
+	"type": "radio"
+    },
+    {
+        "category": "Vehicle Number",
+        "id": "21",
+        "view": "vCrashPerson",
+        "fields": "NumUnit",
+	"type": "text"
+    },
+    {
+        "category": "Person Type",
+        "id": "22",
+        "view": "vCrashPerson",
+        "fields": "PersonType",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Driver",
+                "id": "1"
+            },
+            {
+                "value": "Passenger",
+                "id": "2"
+            },
+            {
+                "value": "Pedestrian",
+                "id": "3"
+            },
+            {
+                "value": "Pedalcyclist (bicyclist, tricycle, unicycle)",
+                "id": "4"
+            },
+            {
+                "value": "Roller skater, Roller blader, etc.",
+                "id": "5"
+            },
+            {
+                "value": "Other",
+                "id": "6"
+            },
+            {
+                "value": "Unknown",
+                "id": "7"
+            }
+        ]
+    },
+    {
+        "category": "Seating Position",
+        "id": "23",
+        "view": "vCrashPerson",
+        "fields": "SeatingPosition",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Front - left (driver/motorcycle driver)",
+                "id": "1"
+            },
+            {
+                "value": "Front - middle",
+                "id": "2"
+            },
+            {
+                "value": "Front - right",
+                "id": "3"
+            },
+            {
+                "value": "Second seat - left (motorcycle passenger)",
+                "id": "4"
+            },
+            {
+                "value": "Second seat - middle",
+                "id": "5"
+            },
+            {
+                "value": "Second seat - right",
+                "id": "6"
+            },
+            {
+                "value": "Third row - left (motorcycle passenger)",
+                "id": "7"
+            },
+            {
+                "value": "Third row - middle",
+                "id": "8"
+            },
+            {
+                "value": "Third row - right",
+                "id": "9"
+            },
+            {
+                "value": "Sleeper section of cab (truck)",
+                "id": "10"
+            },
+            {
+                "value": "Passenger in other enclosed passenger area (refer to supplemental multi-occupant form)",
+                "id": "11"
+            },
+            {
+                "value": "Passenger in unenclosed area (pickup)",
+                "id": "12"
+            },
+            {
+                "value": "Trailing unit",
+                "id": "13"
+            },
+            {
+                "value": "Riding on vehicle exterior",
+                "id": "14"
+            },
+            {
+                "value": "Unknown",
+                "id": "15"
+            }
+        ]
+    },
+    {
+        "category": "Age",
+        "id": "24",
+        "view": "vCrashPerson",
+        "fields": "Age",
+	"type": "slider",
+	"min": 0,
+	"max": 120,
+	"increment": 1,
+	"values":"13,19"
+    },
+    {
+        "category": "Ethnicity",
+        "id": "25",
+        "view": "vCrashPerson",
+        "fields": "Race",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "White",
+                "id": "W"
+            },
+            {
+                "value": "Black",
+                "id": "B"
+            },
+            {
+                "value": "American Indian",
+                "id": "I"
+            },
+            {
+                "value": "Hispanic",
+                "id": "H"
+            },
+            {
+                "value": "Asian",
+                "id": "A"
+            },
+            {
+                "value": "Other",
+                "id": "O"
+            },
+            {
+                "value": "Unknown",
+                "id": "U"
+            }
+        ]
+    },
+    {
+        "category": "Gender",
+        "id": "26",
+        "view": "vCrashPerson",
+        "fields": "Gender",
+	"type": "radio",
+        "options": [
+            {
+                "value": "Male",
+                "id": "M"
+            },
+            {
+                "value": "Female",
+                "id": "F"
+            },
+            {
+                "value": "Unknown",
+                "id": "U"
+            }
+        ]
+    },
+    {
+        "category": "Occupant/Non-Motorist Protection",
+        "id": "27",
+        "view": "vCrashPerson",
+        "fields": "Protection",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "None used",
+                "id": "0"
+            },
+            {
+                "value": "Lap belt only",
+                "id": "1"
+            },
+            {
+                "value": "Shoulder and lap belt",
+                "id": "2"
+            },
+            {
+                "value": "Shoulder belt only",
+                "id": "3"
+            },
+            {
+                "value": "Child restraint",
+                "id": "4"
+            },
+            {
+                "value": "Helmet (motorcyclist or non-motorist)",
+                "id": "5"
+            },
+            {
+                "value": "Protective pads",
+                "id": "6"
+            },
+            {
+                "value": "Reflective clothing",
+                "id": "7"
+            },
+            {
+                "value": "Lighting",
+                "id": "8"
+            },
+            {
+                "value": "Other",
+                "id": "9"
+            },
+            {
+                "value": "Unable to determine",
+                "id": "10"
+            }
+        ]
+    },
+    {
+        "category": "Air Bag Deployment",
+        "id": "28",
+        "view": "vCrashPerson",
+        "fields": "AirbagDeployed",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "No Air Bag(s)",
+                "id": "0"
+            },
+            {
+                "value": "Not deployed",
+                "id": "1"
+            },
+            {
+                "value": "Deployed - front",
+                "id": "2"
+            },
+            {
+                "value": "Deployed - side",
+                "id": "3"
+            },
+            {
+                "value": "Deployed - both front and side",
+                "id": "4"
+            },
+            {
+                "value": "Unknown",
+                "id": "5"
+            }
+        ]
+    },
+    {
+        "category": "Air Bag Switch Status",
+        "id": "29",
+        "view": "vCrashPerson",
+        "fields": "AirbagSwitch",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "No ON-OFF switch",
+                "id": "0"
+            },
+            {
+                "value": "Switch in ON position",
+                "id": "1"
+            },
+            {
+                "value": "Switch in OFF position",
+                "id": "2"
+            },
+            {
+                "value": "Unknown if ON-OFF switch present",
+                "id": "3"
+            },
+            {
+                "value": "Unknown position in vehicle",
+                "id": "4"
+            }
+        ]
+    },
+    {
+        "category": "Trapped Status",
+        "id": "30",
+        "view": "vCrashPerson",
+        "fields": "Trapped",
+	"type": "radio",
+        "options": [
+            {
+                "value": "Yes",
+                "id": "1"
+            },
+            {
+                "value": "No",
+                "id": "2"
+            },
+            {
+                "value": "Unknown",
+                "id": "3"
+            }
+        ]
+    },
+    {
+        "category": "Ejection Status",
+        "id": "31",
+        "view": "vCrashPerson",
+        "fields": "Ejection",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Not ejected",
+                "id": "1"
+            },
+            {
+                "value": "Totally ejected",
+                "id": "2"
+            },
+            {
+                "value": "Partially ejected",
+                "id": "3"
+            },
+            {
+                "value": "Unknown",
+                "id": "4"
+            }
+        ]
+    },
+    {
+        "category": "Injury Status",
+        "id": "32",
+        "view": "vCrashPerson",
+        "fields": "Injury",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Killed",
+                "id": "1"
+            },
+            {
+                "value": "A injury type (disabling)",
+                "id": "2"
+            },
+            {
+                "value": "B injury type (evident)",
+                "id": "3"
+            },
+            {
+                "value": "C injury type (possible)",
+                "id": "4"
+            },
+            {
+                "value": "No injury",
+                "id": "5"
+            },
+            {
+                "value": "Unknown",
+                "id": "6"
+            }
+        ]
+    },
+    {
+        "category": "Relation to Roadway Surface",
+        "id": "33",
+        "view": "vCrash",
+        "fields": "LocationRelationToRoad",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "On Roadway (Surface)",
+                "id": "1"
+            },
+            {
+                "value": "Roadway",
+                "id": "Off"
+            },
+            {
+                "value": "Shoulder",
+                "id": "2"
+            },
+            {
+                "value": "Median",
+                "id": "3"
+            },
+            {
+                "value": "Roadside",
+                "id": "4"
+            },
+            {
+                "value": "Outside Trafficway",
+                "id": "5"
+            },
+            {
+                "value": "Unknown",
+                "id": "6"
+            }
+        ]
+    },
+    {
+        "category": "Vision Obstruction",
+        "id": "34",
+        "view": "vCrashPerson",
+        "fields": "VisionObstruction",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "None",
+                "id": "0"
+            },
+            {
+                "value": "Vehicle window(s) obscured",
+                "id": "1"
+            },
+            {
+                "value": "Trees, crops, brush, etc.",
+                "id": "2"
+            },
+            {
+                "value": "Building(s)",
+                "id": "3"
+            },
+            {
+                "value": "Embankment",
+                "id": "4"
+            },
+            {
+                "value": "Sign(s)",
+                "id": "5"
+            },
+            {
+                "value": "Hillcrest",
+                "id": "6"
+            },
+            {
+                "value": "Parked vehicle(s)",
+                "id": "7"
+            },
+            {
+                "value": "Vehicle(s) in traffic/moving",
+                "id": "8"
+            },
+            {
+                "value": "Blinded, headlights",
+                "id": "9"
+            },
+            {
+                "value": "Blinded, sunlight",
+                "id": "10"
+            },
+            {
+                "value": "Blinded, other lights",
+                "id": "11"
+            },
+            {
+                "value": "Other",
+                "id": "12"
+            },
+            {
+                "value": "Unknown",
+                "id": "13"
+            }
+        ]
+    },
+    {
+        "category": "Physical Condition",
+        "id": "35",
+        "view": "vCrashPerson",
+        "fields": "PhysicalCondition",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Apparently normal",
+                "id": "1"
+            },
+            {
+                "value": "Illness",
+                "id": "2"
+            },
+            {
+                "value": "Fatigue",
+                "id": "3"
+            },
+            {
+                "value": "Fell asleep, fainted, loss of consciousness",
+                "id": "4"
+            },
+            {
+                "value": "Impairment due to medications/drugs/alcohol",
+                "id": "5"
+            },
+            {
+                "value": "Medical condition",
+                "id": "6"
+            },
+            {
+                "value": "Other physical impairment",
+                "id": "7"
+            },
+            {
+                "value": "Restriction not complied with",
+                "id": "8"
+            },
+            {
+                "value": "Other",
+                "id": "9"
+            },
+            {
+                "value": "Unknown",
+                "id": "10"
+            }
+        ]
+    },
+    {
+        "category": "D.L. Restrictions",
+        "id": "36",
+        "view": "vCrashPerson",
+        "fields": "DLRestrictions",
+	"type": "text"
+    },
+    {
+        "category": "Alcohol/Drugs Suspected",
+        "id": "37",
+        "view": "vCrashPerson",
+        "fields": "AlcoholSuspected",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "No",
+                "id": "0"
+            },
+            {
+                "value": "Yes - alcohol, impairment suspected",
+                "id": "1"
+            },
+            {
+                "value": "Yes - alcohol, no impairment detected",
+                "id": "2"
+            },
+            {
+                "value": "Yes - other drugs, impairment suspected",
+                "id": "3"
+            },
+            {
+                "value": "Yes - other drugs, no impairment detected",
+                "id": "4"
+            },
+            {
+                "value": "Yes - alcohol and other drugs, impairment suspected",
+                "id": "5"
+            },
+            {
+                "value": "Yes - alcohol and other drugs, no impairment detected",
+                "id": "6"
+            },
+            {
+                "value": "Unknown",
+                "id": "7"
+            }
+        ]
+    },
+    {
+        "category": "Alcohol/Drugs Test",
+        "id": "38",
+        "view": "vCrashPerson",
+        "fields": "AlcoholTest",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "No test",
+                "id": "0"
+            },
+            {
+                "value": "Alcohol test",
+                "id": "1"
+            },
+            {
+                "value": "Test for drugs other than alcohol",
+                "id": "2"
+            },
+            {
+                "value": "Test for alcohol and other drugs",
+                "id": "3"
+            },
+            {
+                "value": "Test refused",
+                "id": "4"
+            },
+            {
+                "value": "Unknown",
+                "id": "5"
+            }
+        ]
+    },
+    {
+        "category": "Test Results",
+        "id": "39",
+        "view": "vCrashPerson",
+        "fields": "AlcoholResultType",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "No test",
+                "id": "0"
+            },
+            {
+                "value": "No alcohol or other drugs",
+                "id": "1"
+            },
+            {
+                "value": "Alcohol (percent BAC)",
+                "id": "2"
+            },
+            {
+                "value": "Other drugs reported",
+                "id": "3"
+            },
+            {
+                "value": "Contaminated sample/unusable",
+                "id": "4"
+            },
+            {
+                "value": "Pending",
+                "id": "5"
+            },
+            {
+                "value": "Unknown",
+                "id": "6"
+            }
+        ]
+    },
+    {
+        "category": "Vehicle Seizure (DWI)",
+        "id": "40",
+        "view": "vCrashPerson",
+        "fields": "VehicleSeizure",
+	"type": "radio",
+        "options": [
+            {
+                "value": "Yes",
+                "id": "Y"
+            },
+            {
+                "value": "No",
+                "id": "N"
+            }
+        ]
+    },
+    {
+        "category": "Vehicle Style (Type)",
+        "id": "41",
+        "view": "vCrashUnit",
+        "fields": "VehicleType",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Passenger car",
+                "id": "1"
+            },
+            {
+                "value": "Pickup",
+                "id": "2"
+            },
+            {
+                "value": "Light truck (mini-van, panel)",
+                "id": "3"
+            },
+            {
+                "value": "Sport utility",
+                "id": "4"
+            },
+            {
+                "value": "Van",
+                "id": "5"
+            },
+            {
+                "value": "Commercial bus",
+                "id": "6"
+            },
+            {
+                "value": "School bus",
+                "id": "7"
+            },
+            {
+                "value": "Activity bus",
+                "id": "8"
+            },
+            {
+                "value": "Other bus",
+                "id": "9"
+            },
+            {
+                "value": "Single unit truck (2-axle, 6-tire)",
+                "id": "10"
+            },
+            {
+                "value": "Single unit truck (3 or more axles)",
+                "id": "11"
+            },
+            {
+                "value": "Truck/trailer",
+                "id": "12"
+            },
+            {
+                "value": "Truck/tractor (i.e., bobtail)",
+                "id": "13"
+            },
+            {
+                "value": "Tractor/semi-trailer",
+                "id": "14"
+            },
+            {
+                "value": "Tractor/doubles",
+                "id": "15"
+            },
+            {
+                "value": "Unknown heavy truck",
+                "id": "16"
+            },
+            {
+                "value": "Taxicab",
+                "id": "17"
+            },
+            {
+                "value": "Farm equipment",
+                "id": "18"
+            },
+            {
+                "value": "Farm tractor",
+                "id": "19"
+            },
+            {
+                "value": "Motorcycle",
+                "id": "20"
+            },
+            {
+                "value": "Moped",
+                "id": "21"
+            },
+            {
+                "value": "Motor scooter or motor bike",
+                "id": "22"
+            },
+            {
+                "value": "Pedalcycle (bicycle, tricycle, unicycle)",
+                "id": "23"
+            },
+            {
+                "value": "Pedestrian",
+                "id": "24"
+            },
+            {
+                "value": "Motor home/recreational vehicle",
+                "id": "25"
+            },
+            {
+                "value": "Other",
+                "id": "26"
+            },
+            {
+                "value": "All-terrain vehicle (ATV)",
+                "id": "27"
+            },
+            {
+                "value": "Firetruck",
+                "id": "28"
+            },
+            {
+                "value": "EMS Vehicle, Ambulance, Rescue Squad, etc.",
+                "id": "29"
+            },
+            {
+                "value": "Military",
+                "id": "30"
+            },
+            {
+                "value": "Police",
+                "id": "31"
+            },
+            {
+                "value": "Unknown",
+                "id": "32"
+            }
+        ]
+    },
+    {
+        "category": "Traffic Damage",
+        "id": "43",
+        "view": "vCrashUnit",
+        "fields": "TAD1, TAD2, TAD3",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Front Concentrated",
+                "id": "FC"
+            },
+            {
+                "value": "Front Distributed",
+                "id": "FD"
+            },
+            {
+                "value": "Front Left Corner",
+                "id": "FL"
+            },
+            {
+                "value": "Front Right Corner",
+                "id": "FR"
+            },
+            {
+                "value": "Rear Center",
+                "id": "BC"
+            },
+            {
+                "value": "Rear Distributed",
+                "id": "BD"
+            },
+            {
+                "value": "Rear Left Corner",
+                "id": "BL"
+            },
+            {
+                "value": "Rear Right Corner",
+                "id": "BR"
+            },
+            {
+                "value": "Left Side (door)",
+                "id": "LP"
+            },
+            {
+                "value": "Right Side (door)",
+                "id": "RP"
+            },
+            {
+                "value": "Left Side Front Quarter",
+                "id": "LFQ"
+            },
+            {
+                "value": "Right Side Front Quarter",
+                "id": "RFQ"
+            },
+            {
+                "value": "Left Side Rear Quarter",
+                "id": "LBQ"
+            },
+            {
+                "value": "Right Side Rear Quarter",
+                "id": "RBQ"
+            },
+            {
+                "value": "Left Side Distributed",
+                "id": "LD"
+            },
+            {
+                "value": "Right Side Distributed",
+                "id": "RD"
+            },
+            {
+                "value": "Left Side & Top (rollover)",
+                "id": "L&T"
+            },
+            {
+                "value": "Right Side & Top (rollover)",
+                "id": "R&T"
+            },
+            {
+                "value": "Top",
+                "id": "TOP"
+            },
+            {
+                "value": "Underneath",
+                "id": "UND"
+            }
+        ]
+    },
+    {
+        "category": "Estimated Damage",
+        "id": "44",
+        "view": "vCrashUnit",
+        "fields": "EstimatedDamage",
+	"type": "slider",
+	"min": 0,
+	"max": 100000,
+	"increment": 500,
+	"values":"0,5000"
+    },
+    {
+        "category": "Cargo Body Type",
+        "id": "45",
+        "view": "vCrashUnit",
+        "fields": "CMVBodyType",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Bus (seats for 16 or more, including driver)",
+                "id": "1"
+            },
+            {
+                "value": "Bus (seats more than 8, less than 16, including driver)",
+                "id": "2"
+            },
+            {
+                "value": "Van/enclosed box",
+                "id": "3"
+            },
+            {
+                "value": "Grain/chips/gravel truck",
+                "id": "4"
+            },
+            {
+                "value": "Pole truck",
+                "id": "5"
+            },
+            {
+                "value": "Cargo tank",
+                "id": "6"
+            },
+            {
+                "value": "Flatbed",
+                "id": "7"
+            },
+            {
+                "value": "Dump",
+                "id": "8"
+            },
+            {
+                "value": "Concrete mixer",
+                "id": "9"
+            },
+            {
+                "value": "Auto transporter",
+                "id": "10"
+            },
+            {
+                "value": "Garbage/refuse",
+                "id": "11"
+            },
+            {
+                "value": "Log truck",
+                "id": "12"
+            },
+            {
+                "value": "Other",
+                "id": "13"
+            },
+            {
+                "value": "Intermodal Cargo Container",
+                "id": "14"
+            }
+        ]
+    },
+    {
+        "category": "Vehicle Maneuver/Action",
+        "id": "49",
+        "view": "vCrashUnit",
+        "fields": "CrashSequenceCode01",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Stopped in travel lane (driver still in vehicle)",
+                "id": "1"
+            },
+            {
+                "value": "Parked out of travel lanes",
+                "id": "2"
+            },
+            {
+                "value": "Parked in travel lanes",
+                "id": "3"
+            },
+            {
+                "value": "Going straight ahead",
+                "id": "4"
+            },
+            {
+                "value": "Changing lanes or merging",
+                "id": "5"
+            },
+            {
+                "value": "Passing",
+                "id": "6"
+            },
+            {
+                "value": "Making right turn",
+                "id": "7"
+            },
+            {
+                "value": "Making left turn",
+                "id": "8"
+            },
+            {
+                "value": "Making U turn",
+                "id": "9"
+            },
+            {
+                "value": "Backing (takes priority over other maneuvers)",
+                "id": "10"
+            },
+            {
+                "value": "Slowing or stopping",
+                "id": "11"
+            },
+            {
+                "value": "Starting in roadway (mostly from driveways, public or private)",
+                "id": "12"
+            },
+            {
+                "value": "Parking",
+                "id": "13"
+            },
+            {
+                "value": "Leaving parked position",
+                "id": "14"
+            },
+            {
+                "value": "Avoiding object in road",
+                "id": "15"
+            },
+            {
+                "value": "Other",
+                "id": "16"
+            }
+        ]
+    },
+    {
+        "category": "Non-Motorist Action",
+        "id": "50",
+        "view": "vCrashUnit",
+        "fields": "CrashSequenceCode02",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Entering or crossing specified location",
+                "id": "1"
+            },
+            {
+                "value": "Walking, riding, running/jogging with traffic",
+                "id": "2"
+            },
+            {
+                "value": "Walking, riding, running/jogging against traffic",
+                "id": "3"
+            },
+            {
+                "value": "Working",
+                "id": "4"
+            },
+            {
+                "value": "Pushing vehicle",
+                "id": "5"
+            },
+            {
+                "value": "Approaching or leaving vehicle",
+                "id": "6"
+            },
+            {
+                "value": "Playing",
+                "id": "7"
+            },
+            {
+                "value": "Standing",
+                "id": "8"
+            },
+            {
+                "value": "Other",
+                "id": "9"
+            }
+        ]
+    },
+    {
+        "category": "Non-Motorist Location Prior to Impact",
+        "id": "51",
+        "view": "vCrashUnit",
+        "fields": "CrashSequenceCode03",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Marked crosswalk at intersection",
+                "id": "1"
+            },
+            {
+                "value": "At intersection but no crosswalk",
+                "id": "2"
+            },
+            {
+                "value": "Non-intersection crosswalk",
+                "id": "3"
+            },
+            {
+                "value": "Driveway access crosswalk",
+                "id": "4"
+            },
+            {
+                "value": "In roadway",
+                "id": "5"
+            },
+            {
+                "value": "Not in roadway",
+                "id": "6"
+            },
+            {
+                "value": "Median (but not on shoulder)",
+                "id": "7"
+            },
+            {
+                "value": "Island",
+                "id": "8"
+            },
+            {
+                "value": "Shoulder",
+                "id": "9"
+            },
+            {
+                "value": "Sidewalk",
+                "id": "10"
+            },
+            {
+                "value": "Within 10 feet of roadway (not on shoulder, median, sidewalk, island)",
+                "id": "11"
+            },
+            {
+                "value": "Beyond 10 feet of roadway (within trafficway)",
+                "id": "12"
+            },
+            {
+                "value": "Outside trafficway",
+                "id": "13"
+            },
+            {
+                "value": "Shared-use path or trails",
+                "id": "14"
+            }
+        ]
+    },
+    {
+        "category": "First Harmful Event - Vehicle Level",
+        "id": "52",
+        "view": "vCrashUnit",
+        "fields": "CrashSequenceCode04,CrashSequenceCode05,CrashSequenceCode06,CrashSequenceCode07,CrashSequenceCode08",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Unknown",
+                "id": "0"
+            },
+            {
+                "value": "Ran off Road Right",
+                "id": "1"
+            },
+            {
+                "value": "Ran off Road Left",
+                "id": "2"
+            },
+            {
+                "value": "Ran off Road Straight Ahead",
+                "id": "3"
+            },
+            {
+                "value": "Jackknife",
+                "id": "4"
+            },
+            {
+                "value": "Overturn/Rollover",
+                "id": "5"
+            },
+            {
+                "value": "Crossed Centerline/Median",
+                "id": "6"
+            },
+            {
+                "value": "Downhill runaway",
+                "id": "7"
+            },
+            {
+                "value": "Cargo/Equipment Loss or Shift",
+                "id": "8"
+            },
+            {
+                "value": "Fire/Explosion",
+                "id": "9"
+            },
+            {
+                "value": "Immersion",
+                "id": "10"
+            },
+            {
+                "value": "Equipment Failure (tires, brakes, etc.)",
+                "id": "11"
+            },
+            {
+                "value": "Separation of Units",
+                "id": "12"
+            },
+            {
+                "value": "Other Non-Collision",
+                "id": "13"
+            },
+            {
+                "value": "Pedestrian",
+                "id": "14"
+            },
+            {
+                "value": "Pedalcyclist",
+                "id": "15"
+            },
+            {
+                "value": "Railway Vehicle (train, engine)",
+                "id": "16"
+            },
+            {
+                "value": "Animal",
+                "id": "17"
+            },
+            {
+                "value": "Movable Object",
+                "id": "18"
+            },
+            {
+                "value": "Parked Motor Vehicle",
+                "id": "20"
+            },
+            {
+                "value": "Rear End, Slow, or Stop",
+                "id": "21"
+            },
+            {
+                "value": "Rear End, Turn",
+                "id": "22"
+            },
+            {
+                "value": "Left Turn, Same Roadway",
+                "id": "23"
+            },
+            {
+                "value": "Left Turn, Different Roadways",
+                "id": "24"
+            },
+            {
+                "value": "Right Turn, Same Roadway",
+                "id": "25"
+            },
+            {
+                "value": "Right Turn, Different Roadways",
+                "id": "26"
+            },
+            {
+                "value": "Head On",
+                "id": "27"
+            },
+            {
+                "value": "Sideswipe, Same Direction",
+                "id": "28"
+            },
+            {
+                "value": "Sideswipe, Opposite Direction",
+                "id": "29"
+            },
+            {
+                "value": "Angle Collision",
+                "id": "30"
+            },
+            {
+                "value": "Backing Up",
+                "id": "31"
+            },
+            {
+                "value": "Other Collision With Vehicle",
+                "id": "32"
+            },
+            {
+                "value": "Tree",
+                "id": "33"
+            },
+            {
+                "value": "Utility Pole (with or without light)",
+                "id": "34"
+            },
+            {
+                "value": "Luminaire Pole (non-breakaway)",
+                "id": "35"
+            },
+            {
+                "value": "Luminaire Pole (breakaway)",
+                "id": "36"
+            },
+            {
+                "value": "Official Highway Sign (non-breakaway)",
+                "id": "37"
+            },
+            {
+                "value": "Official Highway Sign (breakaway)",
+                "id": "38"
+            },
+            {
+                "value": "Overhead Sign Support",
+                "id": "39"
+            },
+            {
+                "value": "Commercial Sign",
+                "id": "40"
+            },
+            {
+                "value": "Guardrail End on Shoulder",
+                "id": "41"
+            },
+            {
+                "value": "Guardrail Face on Shoulder",
+                "id": "42"
+            },
+            {
+                "value": "Guardrail End in Median",
+                "id": "43"
+            },
+            {
+                "value": "Guardrail Face in Median",
+                "id": "44"
+            },
+            {
+                "value": "Shoulder Barrier End (non-guardrail)",
+                "id": "45"
+            },
+            {
+                "value": "Shoulder Barrier Face (non-guardrail)",
+                "id": "46"
+            },
+            {
+                "value": "Median Barrier End (non-guardrail)",
+                "id": "47"
+            },
+            {
+                "value": "Median Barrier Face (non-guardrail)",
+                "id": "48"
+            },
+            {
+                "value": "Bridge Rail End",
+                "id": "49"
+            },
+            {
+                "value": "Bridge Rail Face",
+                "id": "50"
+            },
+            {
+                "value": "Overhead Part of Underpass",
+                "id": "51"
+            },
+            {
+                "value": "Pier on Shoulder of Underpass",
+                "id": "52"
+            },
+            {
+                "value": "Pier in Median of Underpass",
+                "id": "53"
+            },
+            {
+                "value": "Abutment (supporting wall) of Underpass",
+                "id": "54"
+            },
+            {
+                "value": "Traffic Island Curb or Median",
+                "id": "55"
+            },
+            {
+                "value": "Catch Basin or Culvert on Shoulder",
+                "id": "56"
+            },
+            {
+                "value": "Catch Basin or Culvert in Median",
+                "id": "57"
+            },
+            {
+                "value": "Ditch",
+                "id": "58"
+            },
+            {
+                "value": "Embankment",
+                "id": "59"
+            },
+            {
+                "value": "Mailbox",
+                "id": "60"
+            },
+            {
+                "value": "Fence or Fence Post",
+                "id": "61"
+            },
+            {
+                "value": "Construction Barrier",
+                "id": "62"
+            },
+            {
+                "value": "Crash Cushion",
+                "id": "63"
+            },
+            {
+                "value": "Other Fixed Object",
+                "id": "64"
+            }
+        ]
+    },
+    {
+        "category": "Distance/Direction to Object Struck",
+        "id": "57",
+        "view": "vCrashUnit",
+        "fields": "CrashSequenceCode09",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "None",
+                "id": "0"
+            },
+            {
+                "value": "In road",
+                "id": "1"
+            },
+            {
+                "value": "Right of road, 0-10 ft.",
+                "id": "2"
+            },
+            {
+                "value": "Right of road, 11-30 ft.",
+                "id": "3"
+            },
+            {
+                "value": "Right of road, over 30 ft.",
+                "id": "4"
+            },
+            {
+                "value": "Left of road, 0-10 ft.",
+                "id": "5"
+            },
+            {
+                "value": "Left of road, 11-30 ft.",
+                "id": "6"
+            },
+            {
+                "value": "Left of road, over 30 ft.",
+                "id": "7"
+            },
+            {
+                "value": "Straight ahead, 0-10 ft.",
+                "id": "8"
+            },
+            {
+                "value": "Straight ahead, 11-30 ft.",
+                "id": "9"
+            },
+            {
+                "value": "Straight ahead, over 30 ft.",
+                "id": "10"
+            }
+        ]
+    },
+    {
+        "category": "Vehicle Underride/Override",
+        "id": "58",
+        "view": "vCrashUnit",
+        "fields": "CrashSequenceCode10",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Underride",
+                "id": "1"
+            },
+            {
+                "value": "Override",
+                "id": "2"
+            },
+            {
+                "value": "Neither Underride or Override",
+                "id": "3"
+            },
+            {
+                "value": "Unknown",
+                "id": "4"
+            }
+        ]
+    },
+    {
+        "category": "Vehicle Defects",
+        "id": "59",
+        "view": "vCrashUnit",
+        "fields": "CrashSequenceCode11",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "None detected",
+                "id": "0"
+            },
+            {
+                "value": "Defective brakes",
+                "id": "1"
+            },
+            {
+                "value": "Defective headlights",
+                "id": "2"
+            },
+            {
+                "value": "Defective rear lights",
+                "id": "3"
+            },
+            {
+                "value": "Defective steering",
+                "id": "4"
+            },
+            {
+                "value": "Defective tires",
+                "id": "5"
+            },
+            {
+                "value": "Other defects",
+                "id": "6"
+            },
+            {
+                "value": "Unknown",
+                "id": "7"
+            }
+        ]
+    },
+    {
+        "category": "Authorized Speed Limit",
+        "id": "60",
+        "view": "vCrashUnit",
+        "fields": "VehicleInfoCode01",
+	"type": "slider",
+	"min": 0,
+	"max": 70,
+	"increment": 5,
+	"values": "25,45"
+    },
+    {
+        "category": "Estimate of Original Traveling Speed",
+        "id": "61",
+        "view": "vCrashUnit",
+        "fields": "VehicleInfoCode02",
+	"type": "slider",
+	"min":0,
+	"max":200,
+	"increment": 5,
+	"values": "25,50"
+    },
+    {
+        "category": "Estimate of Speed at Impact",
+        "id": "62",
+        "view": "vCrashUnit",
+        "fields": "VehicleInfoCode03",
+	"type": "slider",
+	"min":0,
+	"max":200,
+	"increment": 5,
+	"values": "25,50"
+    },
+    {
+        "category": "Tire Impressions Before Impact",
+        "id": "63",
+        "view": "vCrashUnit",
+        "fields": "VehicleInfoCode04",
+	"type": "slider",
+	"min":0,
+	"max":1000,
+	"increment": 50,
+	"values": "50,200"	
+    },
+    {
+        "category": "Distance Traveled After Impact",
+        "id": "64",
+        "view": "vCrashUnit",
+        "fields": "VehicleInfoCode05",
+	"type": "slider",
+	"min": 0,
+	"max": 1000,
+	"increment": 50,
+	"values": "50,200"
+    },
+    {
+        "category": "Emergency Vehicle Use",
+        "id": "65",
+        "view": "vCrashUnit",
+        "fields": "VehicleInfoCode06",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Fire truck",
+                "id": "1"
+            },
+            {
+                "value": "EMS Vehicle, Ambulance, Rescue Squad, etc.",
+                "id": "2"
+            },
+            {
+                "value": "Military",
+                "id": "3"
+            },
+            {
+                "value": "Police",
+                "id": "4"
+            }
+        ]
+    },
+    {
+        "category": "Post Crash Fire",
+        "id": "66",
+        "view": "vCrashUnit",
+        "fields": "VehicleInfoCode07",
+	"type": "radio",
+        "options": [
+            {
+                "value": "Yes",
+                "id": "Y"
+            },
+            {
+                "value": "No",
+                "id": "N"
+            }
+        ]
+    },
+    {
+        "category": "School Bus - Contact Vehicle",
+        "id": "67",
+        "view": "vCrashUnit",
+        "fields": "VehicleInfoCode08",
+	"type": "radio",
+        "options": [
+            {
+                "value": "Yes",
+                "id": "Y"
+            },
+            {
+                "value": "No",
+                "id": "N"
+            }
+        ]
+    },
+    {
+        "category": "Road Feature",
+        "id": "69",
+        "view": "vCrash",
+        "fields": "RoadwayCode01",
+	"type": "radio",
+        "options": [
+            {
+                "value": "Yes",
+                "id": "Y"
+            },
+            {
+                "value": "No",
+                "id": "N"
+            }
+        ]
+    },
+    {
+        "category": "School Bus - Noncontact Vehicle",
+        "id": "68",
+        "view": "vCrashUnit",
+        "fields": "VehicleInfoCode09",
+	"type": "radio",
+        "options": [
+            {
+                "value": "Yes",
+                "id": "Y"
+            },
+            {
+                "value": "No",
+                "id": "N"
+            }
+        ]
+    },
+    {
+        "category": "Road Feature",
+        "id": "69",
+        "view": "vCrash",
+        "fields": "RoadwayCode01",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "No special feature",
+                "id": "0"
+            },
+            {
+                "value": "Bridge",
+                "id": "1"
+            },
+            {
+                "value": "Bridge approach",
+                "id": "2"
+            },
+            {
+                "value": "Underpass",
+                "id": "3"
+            },
+            {
+                "value": "Driveway, public",
+                "id": "4"
+            },
+            {
+                "value": "Driveway, private",
+                "id": "5"
+            },
+            {
+                "value": "Alley intersection",
+                "id": "6"
+            },
+            {
+                "value": "Four-way intersection",
+                "id": "7"
+            },
+            {
+                "value": "T-intersection",
+                "id": "8"
+            },
+            {
+                "value": "Y-intersection",
+                "id": "9"
+            },
+            {
+                "value": "Traffic circle/roundabout",
+                "id": "10"
+            },
+            {
+                "value": "Five-point, or more",
+                "id": "11"
+            },
+            {
+                "value": "Related to intersection",
+                "id": "12"
+            },
+            {
+                "value": "Non-intersection median crossing",
+                "id": "13"
+            },
+            {
+                "value": "End or beginning of divided highway",
+                "id": "14"
+            },
+            {
+                "value": "Off-ramp entry",
+                "id": "15"
+            },
+            {
+                "value": "Off-ramp proper",
+                "id": "16"
+            },
+            {
+                "value": "Off-ramp terminal on crossroad",
+                "id": "17"
+            },
+            {
+                "value": "Merge lane between on and off ramp",
+                "id": "18"
+            },
+            {
+                "value": "On-ramp entry",
+                "id": "19"
+            },
+            {
+                "value": "On-ramp proper",
+                "id": "20"
+            },
+            {
+                "value": "On-ramp terminal on crossroad",
+                "id": "21"
+            },
+            {
+                "value": "Railroad crossing",
+                "id": "22"
+            },
+            {
+                "value": "Tunnel",
+                "id": "23"
+            },
+            {
+                "value": "Shared-use paths or trails",
+                "id": "24"
+            },
+            {
+                "value": "Other",
+                "id": "25"
+            }
+        ]
+    },
+    {
+        "category": "Road Character",
+        "id": "70",
+        "view": "vCrash",
+        "fields": "RoadwayCode02",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Straight, level",
+                "id": "1"
+            },
+            {
+                "value": "Straight, hillcrest",
+                "id": "2"
+            },
+            {
+                "value": "Straight, grade",
+                "id": "3"
+            },
+            {
+                "value": "Straight, bottom (sag)",
+                "id": "4"
+            },
+            {
+                "value": "Curve, level",
+                "id": "5"
+            },
+            {
+                "value": "Curve, hillcrest",
+                "id": "6"
+            },
+            {
+                "value": "Curve, grade",
+                "id": "7"
+            },
+            {
+                "value": "Curve, bottom (sag)",
+                "id": "8"
+            },
+            {
+                "value": "Other",
+                "id": "9"
+            }
+        ]
+    },
+    {
+        "category": "Road Classification",
+        "id": "71",
+        "view": "vCrash",
+        "fields": "RoadwayCode03",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Interstate",
+                "id": "1"
+            },
+            {
+                "value": "U.S. route",
+                "id": "2"
+            },
+            {
+                "value": "N.C. route",
+                "id": "3"
+            },
+            {
+                "value": "State secondary route",
+                "id": "4"
+            },
+            {
+                "value": "Local street",
+                "id": "5"
+            },
+            {
+                "value": "Public vehicular area",
+                "id": "6"
+            },
+            {
+                "value": "Private road, property or driveway",
+                "id": "7"
+            },
+            {
+                "value": "Other",
+                "id": "8"
+            }
+        ]
+    },
+    {
+        "category": "Road Surface Type",
+        "id": "72",
+        "view": "vCrash",
+        "fields": "RoadwayCode04",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Concrete",
+                "id": "1"
+            },
+            {
+                "value": "Grooved concrete",
+                "id": "2"
+            },
+            {
+                "value": "Smooth asphalt",
+                "id": "3"
+            },
+            {
+                "value": "Coarse asphalt",
+                "id": "4"
+            },
+            {
+                "value": "Gravel",
+                "id": "5"
+            },
+            {
+                "value": "Sand",
+                "id": "6"
+            },
+            {
+                "value": "Soil",
+                "id": "7"
+            },
+            {
+                "value": "Other",
+                "id": "8"
+            }
+        ]
+    },
+    {
+        "category": "Road Configuration",
+        "id": "73",
+        "view": "vCrash",
+        "fields": "RoadwayCode05",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "One-way, not divided",
+                "id": "1"
+            },
+            {
+                "value": "Two-way, not divided",
+                "id": "2"
+            },
+            {
+                "value": "Two-way, divided, unprotected median",
+                "id": "3"
+            },
+            {
+                "value": "Two-way, divided, positive median barrier",
+                "id": "4"
+            },
+            {
+                "value": "Unknown",
+                "id": "5"
+            }
+        ]
+    },
+    {
+        "category": "Access Control",
+        "id": "74",
+        "view": "vCrash",
+        "fields": "RoadwayCode06",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "No access control",
+                "id": "1"
+            },
+            {
+                "value": "Full access control",
+                "id": "2"
+            },
+            {
+                "value": "Partial access control",
+                "id": "3"
+            }
+        ]
+    },
+    {
+        "category": "Number of Lanes",
+        "id": "75",
+        "view": "vCrash",
+        "fields": "RoadwayCode07",
+	"type": "slider",
+	"min": 0,
+	"max": 10,
+	"increment": 1,
+	"values": "2,4"
+    },
+    {
+        "category": "Traffic Control Type",
+        "id": "76",
+        "view": "vCrash",
+        "fields": "RoadwayCode08",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "No control present",
+                "id": "0"
+            },
+            {
+                "value": "Stop sign",
+                "id": "1"
+            },
+            {
+                "value": "Yield sign",
+                "id": "2"
+            },
+            {
+                "value": "Stop and go signal",
+                "id": "3"
+            },
+            {
+                "value": "Flashing signal with stop sign",
+                "id": "4"
+            },
+            {
+                "value": "Flashing signal without stop sign",
+                "id": "5"
+            },
+            {
+                "value": "RR gate and flasher",
+                "id": "6"
+            },
+            {
+                "value": "RR flasher",
+                "id": "7"
+            },
+            {
+                "value": "RR cross bucks only",
+                "id": "8"
+            },
+            {
+                "value": "Human control",
+                "id": "9"
+            },
+            {
+                "value": "Warning sign",
+                "id": "10"
+            },
+            {
+                "value": "School zone signs",
+                "id": "11"
+            },
+            {
+                "value": "Flashing stop and go signal",
+                "id": "12"
+            },
+            {
+                "value": "Double yellow line (no passing zone)",
+                "id": "13"
+            },
+            {
+                "value": "Other",
+                "id": "14"
+            }
+        ]
+    },
+    {
+        "category": "Traffic Control Operating",
+        "id": "77",
+        "view": "vCrash",
+        "fields": "RoadwayCode09",
+	"type": "radio",
+        "options": [
+            {
+                "value": "Yes",
+                "id": "1"
+            },
+            {
+                "value": "No",
+                "id": "2"
+            },
+            {
+                "value": "Unknown",
+                "id": "3"
+            }
+        ]
+    },
+    {
+        "category": "Work Zone Area",
+        "id": "78",
+        "view": "vCrash",
+        "fields": "WorkzoneCode01",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Construction work area",
+                "id": "1"
+            },
+            {
+                "value": "Maintenance work area",
+                "id": "2"
+            },
+            {
+                "value": "Utility work area",
+                "id": "3"
+            },
+            {
+                "value": "Intermittent/moving work e.g., patching pothole",
+                "id": "4"
+            },
+            {
+                "value": "No",
+                "id": "5"
+            }
+        ]
+    },
+    {
+        "category": "Work Activity",
+        "id": "79",
+        "view": "vCrash",
+        "fields": "WorkzoneCode02",
+	"type": "radio",
+        "options": [
+            {
+                "value": "On going",
+                "id": "1"
+            },
+            {
+                "value": "No apparent activity",
+                "id": "2"
+            }
+        ]
+    },
+    {
+        "category": "Work Area Marked",
+        "id": "80",
+        "view": "vCrash",
+        "fields": "WorkzoneCode03",
+	"type": "radio",
+        "options": [
+            {
+                "value": "Yes",
+                "id": "1"
+            },
+            {
+                "value": "No",
+                "id": "2"
+            }
+        ]
+    },
+    {
+        "category": "Location of Crash",
+        "id": "81",
+        "view": "vCrash",
+        "fields": "WorkzoneCode04",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "Before work area",
+                "id": "1"
+            },
+            {
+                "value": "In work area approach taper",
+                "id": "2"
+            },
+            {
+                "value": "Adjacent to actual work area",
+                "id": "3"
+            }
+        ]
+    },
+    {
+        "category": "Trailer Type",
+        "id": "82",
+        "view": "vCrashUnit",
+        "fields": "TrailerType",
+	"type": "checkbox",
+        "options": [
+            {
+                "value": "No trailer",
+                "id": "0"
+            },
+            {
+                "value": "Boat",
+                "id": "1"
+            },
+            {
+                "value": "Camper",
+                "id": "2"
+            },
+            {
+                "value": "Utility",
+                "id": "3"
+            },
+            {
+                "value": "Horse",
+                "id": "4"
+            },
+            {
+                "value": "House trailer (mobile home)",
+                "id": "5"
+            },
+            {
+                "value": "Towed vehicle",
+                "id": "6"
+            },
+            {
+                "value": "Other non-semi trailer",
+                "id": "7"
+            },
+            {
+                "value": "Tanker",
+                "id": "8"
+            },
+            {
+                "value": "Enclosed van",
+                "id": "9"
+            },
+            {
+                "value": "Flatbed or platform",
+                "id": "10"
+            },
+            {
+                "value": "Other semi-trailer",
+                "id": "11"
+            },
+            {
+                "value": "Double trailer",
+                "id": "12"
+            }
+        ]
+    }
+]

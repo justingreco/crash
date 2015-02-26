@@ -1,0 +1,136 @@
+html, body {
+	width: 100%;
+}
+
+nav {
+	padding-right: 20px;
+	-moz-box-shadow: 0 0 16px rgba(0,0,0,0.6);
+	box-shadow: 0 0 16px rgba(0,0,0,0.6);
+}
+.container {
+	width: 100%;
+	margin-top: 70px;
+	display: none;
+}
+
+.navbar-nav.navbar-right:last-child {
+margin-right: 0px;
+}
+.panel-group .panel { overflow:visible; }
+.panel-group  .panel-heading {
+	background: #08c;
+	color: white;
+	border-radius: 5px;
+}
+.panel-group .panel {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.twitter-typeahead {
+	width: 100%;
+}
+.leaflet-draw.leaflet-control {
+	display: none;
+}
+.leaflet-popup-content p {
+	margin: 5px 0;
+}
+.bootstrap-select {
+	width: 100% !important;
+}
+#map {
+	height: 500px;
+	margin: 0 20px;
+	-moz-box-shadow: 0 0 16px rgba(0,0,0,0.6);
+	box-shadow: 0 0 16px rgba(0,0,0,0.6);
+}
+.pagination {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: pointer;
+}
+#pageDiv {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	display: none;
+}
+#pageDiv form {
+	margin: 0;
+	width:200px;
+}
+#pageDiv .form-label {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+#paginator {
+	float:left;
+	margin-right: 20px;
+}
+#results {
+	max-width: 65px;
+}
+#list {
+	display: none;
+}
+#list tr{
+	cursor: pointer;
+}
+.footer {
+	margin-top: 40px;
+	-moz-box-shadow: 0 0 16px rgba(0,0,0,0.6);
+	box-shadow: 0 0 16px rgba(0,0,0,0.6);
+}
+.footer img {
+	height: 120px;
+}
+.hidden {
+	display: none;
+}
+
+.progress {
+	display: none;
+}
+
+.alert {
+	display: none;
+}
+
+#categorySelect {
+	margin-bottom: 10px;
+}
+
+#nonStandardDiv {
+	display: none;
+}
+
+#collapseQuery select{
+	margin-top:  10px;
+}
+
+.title-overlay{
+  color: #000;
+  font-weight: bold;
+  font-size: 9pt;
+  white-space: nowrap;
+  text-shadow: 1px 1px #fff, 1px -1px #fff, -1px 1px #fff, -1px -1px #fff;
+  text-shadow: 1px 1px rgba(255,255,255,0.6), 1px -1px rgba(255,255,255,0.6), -1px 1px rgba(255,255,255,0.6), -1px -1px rgba(255,255,255,0.6);
+}
+
+
+
+@media (min-width: 768px) {
+	#map {
+		margin: 0;
+	}
+	#pageDiv form {
+		margin: 20px 0;
+	}
+}
