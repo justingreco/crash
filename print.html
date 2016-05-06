@@ -76,44 +76,41 @@
       map.fitBounds(layer.getBounds());
     }
 
-    function setMap(bufferLatLngs, markers, features, fields, headers, dateField) {
+    function setMap(data, fields) {
       var map = L.map('map', {zoomControl:false, attributionControl: false, dragging: true, touchZoom: true, scrollWheelZoom: true, doubleClickZoom: false, boxZoom:true, tap: false});
-      L.tileLayer('https://{s}.tiles.mapbox.com/v3/examples.map-vyofok3q/{z}/{x}/{y}.png', {
-        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
-        maxZoom: 18
-      }).addTo(map);
-      latlngs = bufferLatLngs;
-      markerLayers = markers;
+      L.tileLayer('http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',{maxZoom: 16, attribution: 'Esri, DeLorme, NAVTEQ'}).addTo(map);
+      L.tileLayer('http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}',{maxZoom: 16, attribution: 'Esri, DeLorme, NAVTEQ'}).addTo(map);
+      //latlngs = bufferLatLngs;
+     // markerLayers = markers;
       map.on('load', function () {
-        addBufferToMap(map, latlngs);
-        addMarkersToMap(map, features);
+        //addBufferToMap(map, latlngs);
+        //addMarkersToMap(map, features);
+        var gj = L.geoJson(data);
+        map.addLayer(gj);
+        console.log(gj);
+        addTable(gj.getLayers(), fields);
       });
       map.setView([35.7769, -78.6436],11);
 
-      addTable(features, fields, headers, dateField);
+      
     }
 
-    function setColumns (headers) {
+    function setColumns (fields) {
       var tr = $("#list>thead>tr");
-      $(headers.split(',')).each(function (i, h) {
-        tr.append("<th>" + h + "</th>");
+      $(fields).each(function (i, f) {
+        tr.append("<th>" + f.label + "</th>");
       });
     }
 
-    function addTable(features, fields, headers, dateField) {
-      setColumns(headers);
-
+    function addTable(features, fields) {
+      setColumns(fields);
       var tbody = $("#list>tbody");
-      $(features.features).each(function (i, f) {
+      $(features).each(function (i, feat) {
         var tr = $("<tr></tr>").appendTo(tbody);
-        $(headers.split(',')).each(function (i, h) {
+        $(fields).each(function (i, f) {
 
-          var fld = fields.split(',')[i];
-          if (fld === dateField) {
-            tr.append("<td>" + new Date(f.attributes[fld]).toUTCString().replace(":00 GMT", "") + "</td>");
-          } else {
-            tr.append("<td>" + f.attributes[fld] + "</td>");
-          }
+          var fld = f.name;
+          tr.append("<td>" + feat.feature.properties[fld] + "</td>");
         })
       });
     }
@@ -123,7 +120,7 @@
 </head>
 <body>
   <div id='map'></div>
-  <h4>Raleigh Crime Activity Map</h4>
+  <h4>Raleigh Crash Map</h4>
   <hr/>
   <table id="list" class="table">
     <thead>

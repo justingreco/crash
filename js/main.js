@@ -23,7 +23,7 @@ var services = {
 	]
 }
 var map, markers, layers, heatMap, bufferMarkers, drawControl, whereArr = [];
-var lastFeature, lastFs;
+var lastGj, lastData;
 var sheets;
 var categories;
 //table functions//
@@ -61,7 +61,7 @@ function setAddressTypeAhead() {
 	$("#addressInput").typeahead([
 		{
 			remote: {
-				url: "http://maps.raleighnc.gov/ArcGIS/rest/services/Addresses/MapServer/0/query?where=UPPER(Address) like UPPER('%QUERY%') &orderByFields=Address&returnGeometry=true&outFields=Address&f=pjson",
+				url: "http://maps.raleighnc.gov/ArcGIS/rest/services/Addresses/MapServer/0/query?where=UPPER(Address) like UPPER('%QUERY%25') &orderByFields=Address&returnGeometry=true&outFields=Address&f=pjson",
 				dataType: "jsonp",
 				filter: function (resp) {
 					var values = [];
@@ -142,7 +142,7 @@ function setIntersectionTypeAhead() {
 	$("#street1").typeahead([
 		{
 			remote: {
-				url: "http://maps.raleighnc.gov/ArcGIS/rest/services/StreetsDissolved/MapServer/0/query?where=UPPER(CARTONAME) like UPPER('%QUERY%') &orderByFields=CARTONAME&returnGeometry=false&outFields=CARTONAME&f=pjson",
+				url: "http://maps.raleighnc.gov/ArcGIS/rest/services/StreetsDissolved/MapServer/0/query?where=UPPER(CARTONAME) like UPPER('%QUERY%25') &orderByFields=CARTONAME&returnGeometry=false&outFields=CARTONAME&f=pjson",
 				dataType: 'jsonp',
 				filter: function (resp) {
 					var values = [];
@@ -284,21 +284,18 @@ function setMap() {
 	loadDistricts();
 }
 function exportTable () {
-	var lid = $("option:selected","#searchFor").index(),
-		headers = services.crime[lid].headers.split(","),
-		fields = services.crime[lid].fields.split(","),
-		dateField = services.crime[lid].fields.split(",")
-		results = [];
-	$(lastFs.features).each(function (i, f) {
-		var result = [];
-		$(headers).each(function (i, header) {
-			var fld = fields[i];;
+	var results = [],
+		headers = [];
+	$(services.fields).each(function (i, f) {
+		headers.push(f.label);
+	});
 
-			if (fld === dateField) {
-				result.push(new Date(f.attributes[fld]).toUTCString().replace(":00 GMT", "").split(",").join(" "));
-			} else {
-				result.push('"'+f.attributes[fld]+'"');
-			}
+	$(lastGj.getLayers()).each(function (i, feat) {
+		var result = [];
+		$(services.fields).each(function (i, f) {
+			var fld = f.name;
+				result.push('"'+feat.feature.properties[fld]+'"');
+
 		});
 		results.push(result);
 	});
@@ -308,7 +305,7 @@ function exportTable () {
 }
 function printWindowLoaded (win, timer) {
 	var lid = $("option:selected","#searchFor").index();
-	win.setMap(bufferMarkers.getLayers()[0].getLatLngs(), markers.getLayers(), lastFs, services.crime[lid].fields, services.crime[lid].headers, services.crime[lid].dateField);
+	win.setMap(lastData, services.fields);
 	clearTimeout(timer);
 }
 function print () {
@@ -386,10 +383,11 @@ function gotQueryResults (data) {
 	$("#list").show();
 	markers.clearLayers();
 	if (data.features) {
+		lastData = data;
 		var gj = L.geoJson(data, {
 			onEachFeature: function (feature, layer) {
 				addPopup(feature, layer);
-				heatMap.addLatLng(feature.geometry.coordinates.reverse());
+				heatMap.addLatLng([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
 			}
 		});
 		lastGj = gj;
@@ -407,7 +405,7 @@ function addReportLink (properties) {
 		url = "http://crash.raleighpd.org/files/" + date.format('YYYYMM') + "/" + date.format('YYYYMMDD') + properties.key + ".pdf";
 	return '<a href="'+url+'" target="_blank">View Report</a>';
 }
-var lastGj;
+
 function addResultsToTable (features) {
 	var tbody = $("#list>tbody").empty(),
 		lid = $("option:selected","#searchFor").index();
